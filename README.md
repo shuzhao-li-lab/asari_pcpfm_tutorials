@@ -52,10 +52,53 @@ Now the pipeline is ready but you will need some data to play with.
 
 These datasets are publically available and will be referred to throughout the tutorial. 
 
-1. HZV029 subset:
+1. HZV029 subset: https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=sharing
 2. HZV029: https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST002233&StudyType=MS&ResultType=5
 
-###
+### 
+
+## Asari.app Tutorial
+
+Asari online is limited to 1 Gb of input files, for this test lets use the **HZV029 subset**. 
+
+In your browser of choice, navigate to `https://asari.app/process`.
+
+The HZV029 dataset is a HILIC positive dataset acquired on an oribtrap. we can safely assume that the mass accuracy is 5 ppm. You will need to provide an email to get a notification when your job is completed:
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/bb5acbfa-1931-4832-85e1-adce7e09d404)
+
+Now navigate to the next page by selecting `save params`. Here you need to drag the 10 mzML files into this window:
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/78c96f55-217d-4cc9-b1e9-d94502038c53)
+
+Then click upload all: 
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/019be76a-0c59-4547-8773-ab79923eda98)
+
+After upload you should see this:
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/e32fe1ff-652d-4a12-be33-c1d6ce28ecca)
+
+Now click `process`and you will see something like this: 
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/76ee201e-7f83-4db9-bbc3-d3a42e47713a)
+
+Record the TASK ID somewhere, you can use it to retrieve results. Now wait...
+
+After a few minutes you should see this: 
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/f520659f-d3b6-4ec6-989b-c871f53b4758)
+
+Now click `get results`, now you will see the result pane. You can check out various statistics. 
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/763be7ef-9800-4b6c-99af-f57b4fcb746e)
+
+The results can be downloaded using `download results`. This will download a .zip file that when opened has a number of files including the preferred feature table and the full feature table under the export subdirectory. 
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/55c7f8b4-50f0-4df6-9a66-a2dc9a7a78fb)
+
+
+
 
 
 
