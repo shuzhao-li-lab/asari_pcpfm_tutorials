@@ -91,7 +91,7 @@ After a few minutes you should see this:
 
 Now click `get results`, now you will see the result pane. You can check out various statistics. 
 
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/763be7ef-9800-4b6c-99af-f57b4fcb746e)
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/43919a67-f6dd-4032-8454-8666be8fac1b)
 
 The results can be downloaded using `download results`. This will download a .zip file that when opened has a number of files including the preferred feature table and the full feature table under the export subdirectory. 
 
