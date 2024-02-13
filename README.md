@@ -30,12 +30,33 @@ Here is the fix. You simply need to add the directory mentioned above to $PATH:
 
 **Note that this will only work for the current terminal window. If you open or close a window, you will need to rerun this command. **
 
+Now run `pcpfm` in the terminal window, you will get an error but you should see this message: 
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/4f5a640c-70fe-4525-bb71-8ac794dc71a5)
+
+
 ### Windows 10
 
 TODO
 
 ## Tutorial Preparation
 
-The tutorial will cover running Asari in the context of the pipeline and standalone. This requires that we have a few datasets to play with. 
+### Input Data
+The tutorial will cover running Asari in the context of the pipeline and standalone. This requires that we have a few datasets to play with. Also you will need several sources of known metabolites for annotation. If you are a non-commercial user, you can easily install these by running:
+
+`pcpfm download_extras`
+
+Which will provide the HMDB, the LMSD, and MoNA for Level 4 and Level 2 annotation respectively. Note that you have to type `yes` in order to download these data sources. 
+
+Now the pipeline is ready but you will need some data to play with. 
+
+These datasets are publically available and will be referred to throughout the tutorial. 
+
+1. HZV029 subset:
+2. HZV029: https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST002233&StudyType=MS&ResultType=5
+
+###
+
+
 
 
