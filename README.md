@@ -1,3 +1,4 @@
+# Setup
 ## Datasets for testing:
 
 You will need to download two datasets for running these tutorials.
@@ -76,8 +77,9 @@ Which will provide the HMDB, the LMSD, and MoNA for Level 4 and Level 2 annotati
 
 Now the pipeline is ready but you will need some data to play with. 
 
-
 ### 
+
+# Tutorials
 
 ## Asari.app Tutorial
 
@@ -119,7 +121,13 @@ The results can be downloaded using `download results`. This will download a .zi
 
 ![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/55c7f8b4-50f0-4df6-9a66-a2dc9a7a78fb)
 
+## basic pcpfm usage
 
+follow the HZV029 subset notebook under notebooks
+
+## feature detection and asari viz
+
+follow the bowen_cell notebook under notebooks
 
 
 
