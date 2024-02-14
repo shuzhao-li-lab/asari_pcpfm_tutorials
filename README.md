@@ -1,3 +1,17 @@
+## Datasets for testing:
+
+You will need to download two datasets for running these tutorials.
+
+The first is the bowen_2023 dataset: 
+
+https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link
+
+The next is the HZV029 subset dataset:
+
+https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
+
+Download to your downloads folder and then unzip it in that directory
+
 ## System Preparation
 Asari and the pcpfm requires python3 and several python3 libraries. 
 
@@ -37,7 +51,19 @@ Now run `pcpfm` in the terminal window, you will get an error but you should see
 
 ### Windows 10
 
-TODO
+Note, I'm not much of a windows user, so these instructions will need improvement. 
+
+Download and install Python3: https://www.python.org/downloads/, I recommend the most recent under specific releases (currently 3.11.8).
+
+Now you will need to add Python3 to your PATH. You can do this using powershell or windows terminal which you can find in the windows start bar if you search for 'powershell' or 'terminal'.
+
+Now you should be able to install packages via pip from powershell or terminal:
+
+`pip3 install pcpfm` or `pip install pcpfm`
+
+and 
+
+`pip3 install asari-metabolomics` or `pip install asari-metabolomics`
 
 ## Tutorial Preparation
 
@@ -50,10 +76,6 @@ Which will provide the HMDB, the LMSD, and MoNA for Level 4 and Level 2 annotati
 
 Now the pipeline is ready but you will need some data to play with. 
 
-These datasets are publically available and will be referred to throughout the tutorial. 
-
-1. HZV029 subset: https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=sharing
-2. HZV029: https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST002233&StudyType=MS&ResultType=5
 
 ### 
 
