@@ -1,19 +1,12 @@
-# Setup
-## Datasets for testing:
+# Tutorials for metabolomics data processing using asari and the pcpfm pipeline
 
-You will need to download two datasets for running these tutorials.
+Asari is a Python program for high-resolution LC-MS metabolomics data preprocessing, geared for reproducibility and performance (https://github.com/shuzhao-li-lab/asari). The design is explaiend in Li et al. Nature Communications 14.1 (2023): 4113 . 
 
-The first is the bowen_2023 dataset: 
+A fully featured pipeline, pcpfm (https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics), has been developed to automate all steps in data processing, including QC, annotation and data wrangling. The manuscript is under review (https://www.biorxiv.org/content/10.1101/2024.02.13.580048v1).
 
-https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link
+This repo hosts the tutorials for asari and pipeline.
 
-The next is the HZV029 subset dataset:
-
-https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
-
-Download to your downloads folder and then unzip it in that directory
-
-## System Preparation
+## Installation (System Preparation)
 Asari and the pcpfm requires python3 and several python3 libraries. 
 
 ### MacOS
@@ -66,9 +59,24 @@ and
 
 `pip3 install asari-metabolomics` or `pip install asari-metabolomics`
 
-## Tutorial Preparation
 
-### Input Data
+## Datasets used in the tutorials:
+
+You will need to download two datasets for running these tutorials.
+
+The first is the bowen_2023 dataset: 
+
+https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link
+
+The next is the HZV029 subset dataset:
+
+https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
+
+Download to your downloads folder and then unzip it in that directory
+
+
+## Additional data libraries for pcpfm
+
 The tutorial will cover running Asari in the context of the pipeline and standalone. This requires that we have a few datasets to play with. Also you will need several sources of known metabolites for annotation. If you are a non-commercial user, you can easily install these by running:
 
 `pcpfm download_extras`
@@ -77,9 +85,32 @@ Which will provide the HMDB, the LMSD, and MoNA for Level 4 and Level 2 annotati
 
 Now the pipeline is ready but you will need some data to play with. 
 
-### 
 
 # Tutorials
+
+## Asari on command line
+
+If installed from pip, one can run `asari` as a command in a terminal, followed by a subcommand for specific tasks.
+
+For help information:
+
+`asari -h`
+
+To process all mzML files under directory mydir/projectx_dir:
+
+`asari process --mode pos --input mydir/projectx_dir`
+
+To get statistical description on a single file (useful to understand data and parameters):
+
+`asari analyze --input mydir/projectx_dir/file_to_analyze.mzML`
+
+To launch a dashboard in your web browser after the project is processed into directory process_result_dir:
+
+`asari viz --input process_result_dir`
+
+Alternative to a standalone command, to run as a module via Python interpreter, one needs to point to module location, e.g.:
+
+`python3 -m asari.main process --mode pos --input mydir/projectx_dir`
 
 ## Asari.app Tutorial
 
