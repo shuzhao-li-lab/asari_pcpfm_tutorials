@@ -5,3 +5,5 @@ Part 1 focuses on running asari as standalone tool. We will use the notebook in 
 Part 2 focuses on basic usage of the pcpfm. Here only a notebook is provided. In the basic tutorial we will run asari using the pipeline
 
 Part 3 is advanced usage of the pcpfm. This includes, manipulation of feature tables, empCpds, and annotation with MS1 and MS2 data.
+
+All of the notebooks are usable on google colab. Links to the colab notebooks are at the top of each notebook.
