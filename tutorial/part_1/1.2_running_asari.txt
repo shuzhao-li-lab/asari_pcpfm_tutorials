@@ -1,0 +1,170 @@
+This will walk you through running Asari on the dataset you download in part 1.1
+Lets assume that the MT02Dataset.zip file was unzipped in the directory that is the 
+current working directory of the terminal. 
+
+Asari requires a 'subcommand' and various options to run. 
+
+For example, the asari 'process' subcommand pre-processes input data into a feature table.
+
+The command for processing the MT02Dataset is:
+
+    `asari process -i ./MT02Dataset -j asari_tutorial_MT02 -m pos --ppm 5`
+
+Where:
+
+    -i indicates the location of the mzML files
+    -m indicates the polarity of the acquisitions
+    -j indicates the project name to save the results under
+    --ppm indicates the mass accuracy of the instrument
+
+By default, a positive ionization mode is assumed and a 5 ppm mass tolerance. 
+
+Thus, you can also process the dataset using just:
+
+    `asari process -i ./MT02Dataset -j asari_tutorial_MT02`
+
+Now you should see something like the following output. Within the output I have added comments specified by
+'#' to tell you what is happening at each step. These are not present in the actual output.
+
+'''
+MLG-JGM444:tutorial mitchjo$ asari process -i ./MT02Dataset -j asari_tutorial_MT02 -m pos --ppm 5
+
+
+    ~~~~~~~ Hello from Asari (1.12.8) ~~~~~~~~~
+
+    Working on ~~ ./MT02Dataset ~~ 
+
+    # Here asari is extracting mzML to mass tracks
+
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    Extracted batch14_MT_20210808_005.mzML to 2992 mass tracks.
+    Extracted batch13_MT_20210807_005.mzML to 3199 mass tracks.
+    Extracted batch12_MT_20210806_005_20210806121327.mzML to 2928 mass tracks.
+    Extracted batch11_MT_20210805_005.mzML to 3210 mass tracks.
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    [Warning] Not index found and build_index_from_scratch is False
+    Extracted batch14_MT_20210808_087.mzML to 3710 mass tracks.
+    Extracted batch14_MT_20210808_089.mzML to 3642 mass tracks.
+    Extracted batch14_MT_20210808_179.mzML to 3728 mass tracks.
+    Extracted batch14_MT_20210808_181.mzML to 3720 mass tracks.
+
+    # The reference sample is selected automatically based on landmark peaks
+
+        The reference sample is:
+        ||* batch14_MT_20210808_087 *||
+
+    Max reference retention time is 299.83 at scan number 783.
+
+    # Here composite mass tracks are being constructed. Followed by 
+    # retention time alignment.
+
+    Constructing MassGrid, ...
+    Adding sample to MassGrid, batch11_MT_20210805_005
+        mapped pairs = 2249 / 3210 
+    Adding sample to MassGrid, batch12_MT_20210806_005_20210806121327
+        mapped pairs = 2698 / 2928 
+    Adding sample to MassGrid, batch13_MT_20210807_005
+        mapped pairs = 2942 / 3199 
+    Adding sample to MassGrid, batch14_MT_20210808_005
+        mapped pairs = 2881 / 2992 
+    Adding sample to MassGrid, batch14_MT_20210808_089
+        mapped pairs = 3359 / 3642 
+    Adding sample to MassGrid, batch14_MT_20210808_179
+        mapped pairs = 3531 / 3728 
+    Adding sample to MassGrid, batch14_MT_20210808_181
+        mapped pairs = 3560 / 3720 
+
+    Building composite mass tracks and calibrating retention time ...
+
+        batch14_MT_20210808_087
+                    good_reference_landmark_peaks:  448
+        batch11_MT_20210805_005
+            good_landmark_peaks:  272
+        batch12_MT_20210806_005_20210806121327
+            good_landmark_peaks:  271
+        batch13_MT_20210807_005
+            good_landmark_peaks:  283
+        batch14_MT_20210808_005
+            good_landmark_peaks:  284
+        batch14_MT_20210808_089
+            good_landmark_peaks:  389
+        batch14_MT_20210808_179
+            good_landmark_peaks:  403
+        batch14_MT_20210808_181
+            good_landmark_peaks:  389
+
+    # Next we can check the mass accuracy of the acquisitions by comparing
+    # to known metabolites. 
+
+    Peak detection on 5909 composite mass tracks, ...
+
+    Mass accuracy was estimated on 300 matched values as -0.6 ppm.
+
+
+    # now pre-annotate into empirical compounds
+
+    Multiple charges considered: [1, 2, 3]
+
+
+    Khipu search grid: 
+                M+H+       Na/H        HCl        K/H        ACN
+    M0         1.007276  22.989276  36.983976  38.963158  42.033825
+    13C/12C    2.010631  23.992631  37.987331  39.966513  43.037180
+    13C/12C*2  3.013986  24.995986  38.990686  40.969868  44.040535
+    Downsized input network with 16 features, highest peak at F6059 
+    Downsized input network with 17 features, highest peak at F7293 
+    Constructed 1558 khipus in this round.
+
+
+    Khipu search grid: 
+                        M+H+, 2x charged  Na/H, 2x charged  HCl, 2x charged  K/H, 2x charged  ACN, 2x charged
+    M0                             0.503638         11.998276        18.995626        19.985217        21.520551
+    13C/12C, 2x charged            1.005316         12.499954        19.497304        20.486895        22.022228
+    13C/12C*2, 2x charged          1.506993         13.001631        19.998981        20.988572        22.523906
+    Constructed 77 khipus in this round.
+
+
+    Khipu search grid: 
+                        M+H+, 3x charged  Na/H, 3x charged  HCl, 3x charged  K/H, 3x charged  ACN, 3x charged
+    M0                             0.335759          8.334610        12.999510        13.659237        14.682793
+    13C/12C, 3x charged            0.670210          8.669061        13.333961        13.993689        15.017244
+    13C/12C*2, 3x charged          1.004662          9.003513        13.668413        14.328140        15.351696
+    Constructed 24 khipus in this round.
+
+
+
+
+    ~~~~~~ Got 1659 khipus, with 4543 features ~~~~~~~ 
+
+    # write outputs
+
+    Annotation of 6455 Empirical compounds was written to output_asari_tutorial_MT02_37105132/Feature_annotation.tsv.
+
+
+
+    Feature table (8787 x 8) was written to output_asari_tutorial_MT02_37105132/export/full_Feature_table.tsv.
+
+    Filtered Feature table (5963 x 8) was written to output_asari_tutorial_MT02_37105132/preferred_Feature_table.tsv.
+
+    Unique compound table (4120 x 8) was written to output_asari_tutorial_MT02_37105132/export/unique_compound__Feature_table.tsv.
+    '''
+
+Now you should find a directory called "output_asari_tutorial_MT02" with the date on the end.
+
+Inside that directory there is the preferred_Feature_table.tsv, which is the feature table you should
+use for most other analyses. 
+
+The Feature_annotation.tsv is a preliminary set of annoations for the features based on the empirical compounds.

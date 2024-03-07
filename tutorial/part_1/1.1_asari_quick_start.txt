@@ -1,0 +1,59 @@
+# This tutorial will cover the basic usage of Asari on the commandline as a standalone program. 
+
+#############################################
+# Assumptions and Data Organization Details #
+#############################################
+
+# Asari requires that all of the mzML files you wish to process be located under one directory.
+# All mzML files should be of the same ionization mode and similar in chemical composition. For example,
+# if you have feces and plasma samples from the same study. You should process each type of sample
+# separately. 
+
+################
+# Installation #
+################
+
+# additional details on installation are found here: https://github.com/shuzhao-li-lab/asari_pcpfm_tutorials
+# you will need Python3 installed and the ability to install packages using pip, contact your system administrator
+# for help installing Python 3 on your system.
+
+# now that you have python3 and pip, let's install asari. 
+
+`pip3 install asari-metabolomics`
+
+# if successful, you can now run:
+
+`asari`
+
+# and get an output with the usage of the tool:
+
+"""
+~~~~~~~ Hello from Asari (1.12.8) ~~~~~~~~~
+
+usage: asari [-h] [-v] [-m MODE] [--ppm PPM] [-i INPUT] [-o OUTPUT] [-j PROJECT] [-p PARAMETERS] [-c CORES] [-f REFERENCE] [--target TARGET] [--database_mode DATABASE_MODE] [--wlen WLEN] [--max_retention_shift MAX_RETENTION_SHIFT]
+             [--num_lowess_iterations NUM_LOWESS_ITERATIONS] [--autoheight AUTOHEIGHT] [--min_peak_height MIN_PEAK_HEIGHT] [--min_prominence_threshold MIN_PROMINENCE_THRESHOLD] [--cal_min_peak_height CAL_MIN_PEAK_HEIGHT]
+             [--min_intensity_threshold MIN_INTENSITY_THRESHOLD] [--peak_area PEAK_AREA] [--pickle PICKLE] [--anno ANNO] [--debug_rtime_align DEBUG_RTIME_ALIGN] [--drop_unaligned_samples DROP_UNALIGNED_SAMPLES]
+             subcommand
+asari: error: the following arguments are required: subcommand
+"""
+
+# if you have an error to the effect of 'command not found', more than likely the python bin directory is not on your 
+# $PATH environmental variable. This can be fixed by running a command like: 
+
+`export PATH=<python_bin_dir>:$PATH`
+
+# where <python_bin_dir> is the location of your python install's bin directory, on my Mac it is located at:
+
+"/Users/mitchjo/Library/Python/3.9/bin/:$PATH"
+
+################
+# Example Data #
+################
+
+# Now lets download the example dataset we will be using in this tutorial:
+
+"https://github.com/shuzhao-li-lab/data/blob/main/data/MT02Dataset.zip"
+
+# To download, push the button in the bar above 'view raw' to the left of the pencil icon.
+
+# now you will need to unzip it using the appropriate tool for your OS.
