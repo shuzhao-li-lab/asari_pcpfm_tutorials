@@ -6,6 +6,8 @@ A fully featured pipeline, pcpfm (https://github.com/shuzhao-li-lab/PythonCentri
 
 This repo hosts the tutorials for asari and pipeline.
 
+Notebooks that will be demonstrated during the workshop are available under 'tutorials'. Please look for the 'open in colab' badge at the top of each ipynb to run them in google colab. This requires no installation on your system to test out the pcpfm.
+
 ## Installation (System Preparation)
 Asari and the pcpfm requires python3 and several python3 libraries. 
 
