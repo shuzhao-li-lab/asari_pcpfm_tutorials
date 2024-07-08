@@ -2,7 +2,7 @@
 
 Asari is a Python program for high-resolution LC-MS metabolomics data preprocessing, geared for reproducibility and performance (https://github.com/shuzhao-li-lab/asari). The design is explaiend in Li et al. Nature Communications 14.1 (2023): 4113 . 
 
-A fully featured pipeline, pcpfm (https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics), has been developed to automate all steps in data processing, including QC, annotation and data wrangling. The manuscript is under review (https://www.biorxiv.org/content/10.1101/2024.02.13.580048v1).
+A fully featured pipeline, pcpfm (https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics), has been developed to automate all steps in data processing, including QC, annotation and data wrangling. Here's the paper describing the data structures and pipeline: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011912 .
 
 This repo hosts the tutorials for asari and pipeline.
 
