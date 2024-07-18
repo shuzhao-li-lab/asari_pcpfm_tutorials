@@ -1,5 +1,31 @@
-## System Preparation
-Asari and the pcpfm requires python3 and several python3 libraries. 
+# How to install the software and get example data
+
+If you know this piece of code:
+`pip install pcpfm`, you are good to go. 
+
+> **Explanation:** Asari and pcpfm depend on Python3 and some libraries. By install pcpfm using the pip tool, the dependency libraries will be installed as well. Replace pcpfm with asari-metabolomics if you are not ready to install the full pipeline.
+
+For others, we recommend to install one of the these options:
+- [VS Code](https://code.visualstudio.com/download). Then install Python and Jupyter notebook within VS Code.
+- [Anaconda](https://docs.anaconda.com/anaconda/install/). Within Anaconda Navigator, you can find the notebook.
+
+> **Explanation:** What you really need is Python3 and some libraries on your computer. Their installation involves details for different operating systems. The above tools take care of most these details for you. VS Code is a development environment; Anaconda is a scientific computing environment. We want Jupyter Notebook to illustrate what the code does. 
+
+Now the software is ready but you will need some data to play with. 
+
+## Datasets used in the tutorials:
+
+The first is the bowen_2023 dataset: 
+
+https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link
+
+The next is the HZV029 subset dataset:
+
+https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
+
+Download to your downloads folder and then unzip it in that directory
+
+## If and only if you insist doing your own things...
 
 ### MacOS
 For MacOS, python3 comes installed natively. Test that you have Python3 and it works by ›‹›
@@ -30,12 +56,33 @@ Here is the fix. You simply need to add the directory mentioned above to $PATH:
 
 **Note that this will only work for the current terminal window. If you open or close a window, you will need to rerun this command. **
 
+Now run `pcpfm` in the terminal window, you will get an error but you should see this message: 
+
+![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/4f5a640c-70fe-4525-bb71-8ac794dc71a5)
+
+
 ### Windows 10
 
-TODO
+Note, I'm not much of a windows user, so these instructions will need improvement. [JM] 
 
-## Tutorial Preparation
+Download and install Python3: https://www.python.org/downloads/, I recommend the most recent under specific releases (currently 3.11.8).
 
-The tutorial will cover running Asari in the context of the pipeline and standalone. This requires that we have a few datasets to play with. 
+Now you will need to add Python3 to your PATH. You can do this using powershell or windows terminal which you can find in the windows start bar if you search for 'powershell' or 'terminal'.
 
+Now you should be able to install packages via pip from powershell or terminal:
+
+`pip3 install pcpfm` or `pip install pcpfm`
+
+and 
+
+`pip3 install asari-metabolomics` or `pip install asari-metabolomics`
+
+
+## Additional data libraries for pcpfm
+
+The tutorial will cover running Asari in the context of the pipeline and standalone. This requires that we have a few datasets to play with. Also you will need several sources of known metabolites for annotation. If you are a non-commercial user, you can easily install these by running:
+
+`pcpfm download_extras`
+
+Which will provide the HMDB, the LMSD, and MoNA for Level 4 and Level 2 annotation respectively. Note that you have to type `yes` in order to download these data sources. 
 

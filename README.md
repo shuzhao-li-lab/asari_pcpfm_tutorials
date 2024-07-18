@@ -1,168 +1,33 @@
-# Tutorials for metabolomics data processing using asari and the pcpfm pipeline
+# Tutorials for metabolomics data processing using asari tools
 
-Asari is a Python program for high-resolution LC-MS metabolomics data preprocessing, geared for reproducibility and performance (https://github.com/shuzhao-li-lab/asari). The design is explaiend in Li et al. Nature Communications 14.1 (2023): 4113 . 
+This currently covers asari and the PCPFM pipeline, namely LC-MS data processing, QC, annotation including MS/MS and reporting. Continued development will include more types of data.
 
-A fully featured pipeline, pcpfm (https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics), has been developed to automate all steps in data processing, including QC, annotation and data wrangling. Here's the paper describing the data structures and pipeline: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011912 .
+Multiple tutorials are linked here:
+- [Asari in 5 minutes](/5minutes.md) if you are in a hurry.
+- [One-hour to understand and master asari and pipeline](/1hour.md).
+- [Everything you want to know about asari suite](/everything_to_know.md).
 
-This repo hosts the tutorials for asari and pipeline.
+If you are in a class, multiple versions of PowerPoint slides are included in this repo.
 
-Notebooks that will be demonstrated during the workshop are available under 'tutorials'. Please look for the 'open in colab' badge at the top of each ipynb to run them in google colab. This requires no installation on your system to test out the pcpfm.
+If you need install software and/or download data, [this page](/Installation_Preparation.md) may be useful.
 
-## Installation (System Preparation)
-Asari and the pcpfm requires python3 and several python3 libraries. 
+Beyond the tutorials, a few example notebooks are provided under [notebooks](/notebooks/) for data analysis.
 
-### MacOS
-For MacOS, python3 comes installed natively. Test that you have Python3 and it works by ›‹›
+## Citations of asari suite of tools
 
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/ec571548-7bdf-44b4-ae68-9b4a6aa6eb85)
+- Li, S., Siddiqa, A., Thapa, M., Chi, Y. and Zheng, S., 2023. Trackable and scalable LC-MS metabolomics data processing using asari. Nature Communications, 14(1), p.4113. (https://www.nature.com/articles/s41467-023-39889-1)
 
-^^ clicking on the search icon (magnifying glass) and typing "terminal". You should get a dialog like this:
+- Mitchell, J.M., Chi, Y., Thapa, M., Pang, Z., Xia, J. and Li, S., 2024. Common data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline. PLOS Computational Biology, 20(6), p.e1011912. (https://doi.org/10.1371/journal.pcbi.1011912)
 
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/0c08dc0a-dc99-4209-bfe5-c8bae8e4b503)
+- Li, S. and Zheng, S., 2023. Generalized tree structure to annotate untargeted metabolomics and stable isotope tracing data. Analytical chemistry, 95(15), pp.6212-6217. (https://pubs.acs.org/doi/10.1021/acs.analchem.2c05810) (the khipu paper).
 
-Hit enter and you should now see a terminal window:
+- Mitchell JM, Chi Y, Zheng S, Thapa M, Wang E, Li S. Annotation of Metabolites in Stable Isotope Tracing Untargeted Metabolomics via Khipu-web. Under review. 
 
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/02f67f74-8cb8-44b0-8792-c999c07e1ba8)
-
-Type `which python3` and you should get back a path. If you do not get anything returned from that command you need to install python3. Here are instructions: https://docs.python-guide.org/starting/install3/osx/
-
-Next you will need to install the pipeline and asari. You can do this with a single command `pip3 install pcpfm`: 
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/e9d9dee8-f7b3-4f28-ab77-fc0284fea53d)
-
-If you get an error about "is not on PATH":
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/a1909a6d-b19f-457e-b005-39019d51d4bd)
-
-Here is the fix. You simply need to add the directory mentioned above to $PATH:
-
-`export PATH=<DIRECTORY>:$PATH`, in this example, it is: `export PATH=/Users/mitchjo/Library/Python/3.9/bin/:$PATH`
-
-**Note that this will only work for the current terminal window. If you open or close a window, you will need to rerun this command. **
-
-Now run `pcpfm` in the terminal window, you will get an error but you should see this message: 
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/4f5a640c-70fe-4525-bb71-8ac794dc71a5)
-
-
-### Windows 10
-
-Note, I'm not much of a windows user, so these instructions will need improvement. 
-
-Download and install Python3: https://www.python.org/downloads/, I recommend the most recent under specific releases (currently 3.11.8).
-
-Now you will need to add Python3 to your PATH. You can do this using powershell or windows terminal which you can find in the windows start bar if you search for 'powershell' or 'terminal'.
-
-Now you should be able to install packages via pip from powershell or terminal:
-
-`pip3 install pcpfm` or `pip install pcpfm`
-
-and 
-
-`pip3 install asari-metabolomics` or `pip install asari-metabolomics`
-
-
-## Datasets used in the tutorials:
-
-You will need to download two datasets for running these tutorials.
-
-The first is the bowen_2023 dataset: 
-
-https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link
-
-The next is the HZV029 subset dataset:
-
-https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
-
-Download to your downloads folder and then unzip it in that directory
-
-
-## Additional data libraries for pcpfm
-
-The tutorial will cover running Asari in the context of the pipeline and standalone. This requires that we have a few datasets to play with. Also you will need several sources of known metabolites for annotation. If you are a non-commercial user, you can easily install these by running:
-
-`pcpfm download_extras`
-
-Which will provide the HMDB, the LMSD, and MoNA for Level 4 and Level 2 annotation respectively. Note that you have to type `yes` in order to download these data sources. 
-
-Now the pipeline is ready but you will need some data to play with. 
-
-
-# Tutorials
-
-## Asari on command line
-
-If installed from pip, one can run `asari` as a command in a terminal, followed by a subcommand for specific tasks.
-
-For help information:
-
-`asari -h`
-
-To process all mzML files under directory mydir/projectx_dir:
-
-`asari process --mode pos --input mydir/projectx_dir`
-
-To get statistical description on a single file (useful to understand data and parameters):
-
-`asari analyze --input mydir/projectx_dir/file_to_analyze.mzML`
-
-To launch a dashboard in your web browser after the project is processed into directory process_result_dir:
-
-`asari viz --input process_result_dir`
-
-Alternative to a standalone command, to run as a module via Python interpreter, one needs to point to module location, e.g.:
-
-`python3 -m asari.main process --mode pos --input mydir/projectx_dir`
-
-## Asari.app Tutorial
-
-Asari online is limited to 1 Gb of input files, for this test lets use the **HZV029 subset**. 
-
-In your browser of choice, navigate to `https://asari.app/process`.
-
-The HZV029 dataset is a HILIC positive dataset acquired on an oribtrap. we can safely assume that the mass accuracy is 5 ppm. You will need to provide an email to get a notification when your job is completed:
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/bb5acbfa-1931-4832-85e1-adce7e09d404)
-
-Now navigate to the next page by selecting `save params`. Here you need to drag the 10 mzML files into this window:
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/78c96f55-217d-4cc9-b1e9-d94502038c53)
-
-Then click upload all: 
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/019be76a-0c59-4547-8773-ab79923eda98)
-
-After upload you should see this:
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/e32fe1ff-652d-4a12-be33-c1d6ce28ecca)
-
-Now click `process`and you will see something like this: 
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/76ee201e-7f83-4db9-bbc3-d3a42e47713a)
-
-Record the TASK ID somewhere, you can use it to retrieve results. Now wait...
-
-After a few minutes you should see this: 
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/f520659f-d3b6-4ec6-989b-c871f53b4758)
-
-Now click `get results`, now you will see the result pane. You can check out various statistics. 
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/43919a67-f6dd-4032-8454-8666be8fac1b)
-
-The results can be downloaded using `download results`. This will download a .zip file that when opened has a number of files including the preferred feature table and the full feature table under the export subdirectory. 
-
-![image](https://github.com/shuzhao-li-lab/pcpfm_tutorials/assets/10132705/55c7f8b4-50f0-4df6-9a66-a2dc9a7a78fb)
-
-## basic pcpfm usage
-
-follow the HZV029 subset notebook under notebooks
-
-## feature detection and asari viz
-
-follow the bowen_cell notebook under notebooks
-
-
-
-
-
+The asari suite includes 
+- asari (Source code: https://github.com/shuzhao-li/asari, Package Repository: https://pypi.org/project/asari-metabolomics/)
+- metDataModel: data models for metabolomics (https://github.com/shuzhao-li-lab/metDataModel)
+- mass2chem: common utilities in interpreting mass spectrometry data, annotation (https://github.com/shuzhao-li-lab/mass2chem)
+- khipu: a Python library for generalized, low-level annotation of MS metabolomics (https://github.com/shuzhao-li-lab/khipu)
+- JMS: Json's Metabolite Services. Search functions, annotation and metabolic models (https://github.com/shuzhao-li-lab/JMS)
+- pcpfm pipeline (https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics)
+- asari-x: the eXposome miner (to be released)
