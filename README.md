@@ -1,6 +1,6 @@
 # Tutorials for metabolomics data processing using asari tools
 
-This currently covers asari and the PCPFM pipeline, namely LC-MS data processing, QC, annotation including MS/MS and reporting. Continued development will include more types of data.
+This currently covers asari and the PCPFM pipeline, namely LC-MS data processing, QC, annotation including MS/MS and reporting. Continued development will include more types of data. The URL of this repo is https://github.com/shuzhao-li-lab/asari_pcpfm_tutorials.
 
 Multiple tutorials are linked here:
 - [Asari in 5 minutes](/5minutes.md) if you are in a hurry.

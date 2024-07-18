@@ -11,22 +11,21 @@ For others, we recommend to install one of the these options:
 
 > **Explanation:** What you really need is Python3 and some libraries on your computer. Their installation involves details for different operating systems. The above tools take care of most these details for you. VS Code is a development environment; Anaconda is a scientific computing environment. We want Jupyter Notebook to illustrate what the code does. 
 
-Now the software is ready but you will need some data to play with. 
+The software should be ready now.
+
+> **Note:** If you run into any installation problems, you have a better chance to solve them by calling your computer friends. These are usually not specific to our software.
 
 ## Datasets used in the tutorials:
 
 The first is the bowen_2023 dataset:
-
-[https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link](https://drive.google.com/file/d/1EUldDALjPYmmjZrAez4l26RVnDVDtCNF/view?usp=sharing)
+https://drive.google.com/file/d/1EUldDALjPYmmjZrAez4l26RVnDVDtCNF/view?usp=sharing
 
 The next is the HZV029 subset dataset:
-
-[https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
-](https://drive.google.com/file/d/1A9F0MVIX6VMXYH2tKF8krSLuH1aaiMDS/view?usp=drive_link)
+https://drive.google.com/file/d/1A9F0MVIX6VMXYH2tKF8krSLuH1aaiMDS/view?usp=drive_link
 
 Download to your downloads folder and then unzip it in that directory.
 
-## If and only if you insist doing your own things...
+## We are done now. If and only if you insist on doing your own things...
 
 ### MacOS
 For MacOS, python3 comes installed natively. Test that you have Python3 and it works by ›‹›
@@ -77,13 +76,3 @@ Now you should be able to install packages via pip from powershell or terminal:
 and 
 
 `pip3 install asari-metabolomics` or `pip install asari-metabolomics`
-
-
-## Additional data libraries for pcpfm
-
-The tutorial will cover running Asari in the context of the pipeline and standalone. This requires that we have a few datasets to play with. Also you will need several sources of known metabolites for annotation. If you are a non-commercial user, you can easily install these by running:
-
-`pcpfm download_extras`
-
-Which will provide the HMDB, the LMSD, and MoNA for Level 4 and Level 2 annotation respectively. Note that you have to type `yes` in order to download these data sources. 
-
