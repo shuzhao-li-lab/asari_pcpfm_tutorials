@@ -15,15 +15,16 @@ Now the software is ready but you will need some data to play with.
 
 ## Datasets used in the tutorials:
 
-The first is the bowen_2023 dataset: 
+The first is the bowen_2023 dataset:
 
-https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link
+[https://drive.google.com/file/d/14dYpVU40nIjblraOYKE1jXRxHk4LX66D/view?usp=drive_link](https://drive.google.com/file/d/1EUldDALjPYmmjZrAez4l26RVnDVDtCNF/view?usp=sharing)
 
 The next is the HZV029 subset dataset:
 
-https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
+[https://drive.google.com/file/d/1PikUcw3fyF3AgMjCqp42hyVhEvl4Y5mw/view?usp=drive_link
+](https://drive.google.com/file/d/1A9F0MVIX6VMXYH2tKF8krSLuH1aaiMDS/view?usp=drive_link)
 
-Download to your downloads folder and then unzip it in that directory
+Download to your downloads folder and then unzip it in that directory.
 
 ## If and only if you insist doing your own things...
 
