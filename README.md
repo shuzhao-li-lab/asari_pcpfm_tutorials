@@ -5,7 +5,10 @@ This currently covers asari and the PCPFM pipeline, namely LC-MS data processing
 Multiple tutorials are linked here:
 - [Asari in 5 minutes](/5minutes.md) if you are in a hurry.
 - [One-hour to understand and master asari and pipeline](/1hour.md).
-- [Everything you want to know about asari suite](/everything_to_know.md).
+
+Planned tutorials (to come):
+- Everything you want to know about asari suite.
+- Working like a data scientist on Jupyter.
 
 If you are in a class, multiple versions of PowerPoint slides are included in this repo.
 
