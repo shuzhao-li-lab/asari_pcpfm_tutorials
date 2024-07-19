@@ -15,12 +15,16 @@ The software should be ready now.
 
 > **Note:** If you run into any installation problems, you have a better chance to solve them by calling your computer friends. These are usually not specific to our software.
 
-## Datasets used in the tutorials:
+## Datasets we use for tutorials:
 
-The first is the bowen_2023 dataset:
+MT02 dataset:
+https://github.com/shuzhao-li-lab/data/raw/main/data/MT02Dataset.zip
+
+**Optional**
+- Bowen_2023 dataset:
 https://drive.google.com/file/d/1EUldDALjPYmmjZrAez4l26RVnDVDtCNF/view?usp=sharing
 
-The next is the HZV029 subset dataset:
+- HZV029 subset:
 https://drive.google.com/file/d/1A9F0MVIX6VMXYH2tKF8krSLuH1aaiMDS/view?usp=drive_link
 
 Download to your downloads folder and then unzip it in that directory.

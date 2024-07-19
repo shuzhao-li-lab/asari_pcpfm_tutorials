@@ -6,6 +6,8 @@ Asari is a software tool for metabolomics data preprocessing. It's designed from
 We use ThermoRawFileParser (https://github.com/compomics/ThermoRawFileParser) to convert Thermo .RAW files to .mzML. 
 Msconvert in ProteoWizard (https://proteowizard.sourceforge.io/tools.shtml) can handle the conversion of most vendor data formats and .mzXML files.
 
+Our [MT02 dataset](https://github.com/shuzhao-li-lab/data/raw/main/data/MT02Dataset.zip) can be used for testing.
+
 ## If you don't want to deal with command line -
 You can use the asari web app at `https://asari.app/`. 
 
