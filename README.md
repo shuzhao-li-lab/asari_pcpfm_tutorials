@@ -4,6 +4,7 @@ This currently covers asari and the PCPFM pipeline, namely LC-MS data processing
 
 Multiple tutorials are linked here:
 - [Asari in 5 minutes](/5minutes.md) if you are in a hurry.
+- Tutorial for [the web app](/webapp.md).
 - [One-hour to understand and master asari and pipeline](/1hour.md).
 
 Planned tutorials (to come):

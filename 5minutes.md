@@ -9,7 +9,7 @@ Msconvert in ProteoWizard (https://proteowizard.sourceforge.io/tools.shtml) can 
 Our [MT02 dataset](https://github.com/shuzhao-li-lab/data/raw/main/data/MT02Dataset.zip) can be used for testing.
 
 ## If you don't want to deal with command line -
-You can use the asari web app at `https://asari.app/`. 
+You can use the asari web app at https://asari.app/ ([tutorial for the web app](/webapp.md)). 
 
 Its free quota is currently limited to 1 Gb of input files. The app generates a set of output files you can download.
 
