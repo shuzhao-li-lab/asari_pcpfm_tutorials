@@ -617,7 +617,7 @@ Beyond the tutorials, a few example notebooks are provided under [notebooks](/no
 
 - Li, S. and Zheng, S., 2023. Generalized tree structure to annotate untargeted metabolomics and stable isotope tracing data. Analytical chemistry, 95(15), pp.6212-6217. (https://pubs.acs.org/doi/10.1021/acs.analchem.2c05810) (the khipu paper).
 
-- Mitchell JM, Chi Y, Zheng S, Thapa M, Wang E, Li S. Annotation of Metabolites in Stable Isotope Tracing Untargeted Metabolomics via Khipu-web. Under review. 
+- Mitchell JM, Chi Y, Zheng S, Thapa M, Wang E, Li S. Annotation of Metabolites in Stable Isotope Tracing Untargeted Metabolomics via Khipu-web. JASMS 35(12), pp.2824-2835. (https://pubs.acs.org/doi/abs/10.1021/jasms.4c00175)
 
 The asari suite includes 
 - asari (Source code: https://github.com/shuzhao-li/asari, Package Repository: https://pypi.org/project/asari-metabolomics/)
