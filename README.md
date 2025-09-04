@@ -35,5 +35,5 @@ The asari suite includes
 - khipu: a Python library for generalized, low-level annotation of MS metabolomics (https://github.com/shuzhao-li-lab/khipu)
 - JMS: Json's Metabolite Services. Search functions, annotation and metabolic models (https://github.com/shuzhao-li-lab/JMS)
 - pcpfm pipeline (https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics)
-- asari-x: the eXposome miner (to be released)
+- asari-x: the eXposome miner (https://github.com/shuzhao-li-lab/Asari-X)
 

@@ -296,7 +296,7 @@ Goal: to generate report and figures for quality control.
 
 An example command: 
 
-`.main.py QAQC -i ./my_experiment --table_moniker <moniker> --all true`
+`pcpfm QAQC -i ./my_experiment --table_moniker <moniker> --all true`
 
 Passing `--interactive` will allow interactive plots to be generated. By default, figures are saved to disk and the results of each QCQA step is stored in the experiment.json file located in the experiment directory. `--all` can be replaced with any set of supported QCQA commands (e.g., `--pca`, `--pearson` for PCA and inter-sample pearson correlation respectively). 
 
@@ -539,7 +539,7 @@ Experimental MS2 spectra correspond to precursor ions that are fragmented to yie
 
 This example command maps the MS2 spectra in an experiment (from DDA for example) to empirical compounds:
 
-`pcpfm map_ms2 --empCpd_moniker MS1_annotate --new_moniker MS2_mapped`
+`pcpfm map_ms2 --empCpd_moniker MS1_annotate --new_moniker MS2_mapped -i ./my_experiment `
 
 Options can be provided including:
 ```
@@ -626,4 +626,4 @@ The asari suite includes
 - khipu: a Python library for generalized, low-level annotation of MS metabolomics (https://github.com/shuzhao-li-lab/khipu)
 - JMS: Json's Metabolite Services. Search functions, annotation and metabolic models (https://github.com/shuzhao-li-lab/JMS)
 - pcpfm pipeline (https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics)
-- asari-x: the eXposome miner (to be released)
+- asari-x: the eXposome miner (https://github.com/shuzhao-li-lab/Asari-X)
