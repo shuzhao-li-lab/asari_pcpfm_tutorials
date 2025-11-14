@@ -6,6 +6,7 @@ This currently covers asari and the PCPFM pipeline, namely LC-MS data processing
 - [Asari in 5 minutes](/5minutes.md) if you are in a hurry.
 - Tutorial for [the web app](/webapp.md).
 - [One-hour to understand and master asari and pipeline](/1hour.md).
+- Tutorial for [GNPS integration](/tutorial/part_4/4.1_gnps_start.txt) if you have MS1 and MS2 data. 
 
 **Learn more via data science and Jupyter notebooks**
 

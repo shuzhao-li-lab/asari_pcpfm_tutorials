@@ -1,0 +1,21 @@
+# Integrating Asari with GNPS
+
+Global Natural Product Social Molecular Networking (GNPS) can be applied to Asari feature tables with minimal modification by the end user. 
+
+By default, Asari processes MS1 level data only yielding a feature table summarizing the elution peaks and their associated MS1 spectral features. To apply GNPS to an Asari feature table, we must extract and associate the MS1 level features to observed MS2 spectra. This can be done using the example notebook provided. 
+
+There are two experimental designs currently supported. One for interlaced MS1 and MS2 scans, the other for MS1-only acquisitions followed by orthogonal MS2 expriments (MS1 full scan plus DDA). 
+
+# Mixed MS1 and MS2
+
+Mixing MS1 and MS2 acquisitions can produce the most easy to understand data but can introduce potential processing artifacts. For best performance, the data should be well aligned experimentally in both the retention time and mass domains as mixed MS1 and MS2 can lead to undersampling and difficulty correcting alignment errors. 
+
+In this workflow Asari is ran first on the mixed MS1 and MS2 data to yield a feature table that is then associated to extracted MS2 spectra. This use case is covered in 4.1_gnps_mixed_ms1ms2.ipynb. The example uses the data available here: 
+
+ftp://massive-ftp.ucsd.edu/v04/MSV000090156/peak/mzml/POS_MSMS/Lab_2/
+
+# Full Scan MS1 plus DDA 
+
+This workflow is similar to the advanced_pcpfm_usage.ipynb level 2 annotations but exported so that they can be used more easily with GNPS. 
+
+The workflows for the different MS1 and MS2 modes are essentially identical except in DDA, there is no restriction that the fragmented ion be present in a particular biological sample as is the case for mixed MS1 and MS2.
